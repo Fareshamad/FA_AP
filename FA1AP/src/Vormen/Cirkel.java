@@ -1,15 +1,20 @@
 package Vormen;
 
 public class Cirkel extends Vorm implements Rondvormig{
+    private int straal;
+
+    public Cirkel(int straal){
+        this.straal = straal;
+    }
+
     @Override
     public int berekenOppervlakte() {
-        int straal = 6;
-        return (int) (straal*straal*Math.PI);
+        return (int) (this.straal*this.straal*Math.PI);
     }
 
     @Override
     public int geefStraal() {
-        return 6;
+        return this.straal;
     }
 
 }

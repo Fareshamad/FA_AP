@@ -1,15 +1,23 @@
 package Vormen;
 
 public class Ellips extends Vorm implements Rondvormig{
+    private int halveLangeAs;
+    private int halveKorteAs;
+    private int straal;
+
+    public Ellips(int halvelangeAs, int halveKorteAs, int straal){
+        this.halveLangeAs = halvelangeAs;
+        this.halveKorteAs = halveKorteAs;
+        this.straal = straal;
+    }
+
     @Override
     public int berekenOppervlakte() {
-        int halveLangeAs = 8;
-        int halveKorteAs = 2;
         return (int) (Math.PI*halveKorteAs*halveLangeAs);
     }
 
     @Override
     public int geefStraal() {
-        return 8;
+        return this.straal;
     }
 }

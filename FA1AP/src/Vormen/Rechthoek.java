@@ -1,10 +1,16 @@
 package Vormen;
 
 public class Rechthoek extends Vorm {
+    private int lengte;
+    private int breedte;
+
+    public Rechthoek(int lengte, int breedte){
+        this.lengte = lengte;
+        this.breedte = breedte;
+    }
+
     @Override
     public int berekenOppervlakte() {
-        int lengte = 4;
-        int breedte = 10;
-        return lengte*breedte;
+        return this.lengte*this.breedte;
     }
 }
